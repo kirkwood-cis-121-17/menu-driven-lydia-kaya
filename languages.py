@@ -12,7 +12,7 @@ def main():
     elif choice == "3":
         sentence_german()
     else:
-        print("Please try again.")
+        print("Please enter a number 1-3 and try again.")
         main()
     
 def sentence_japanese():
@@ -33,7 +33,7 @@ def sentence_japanese():
         print("Ima bennkyo o shimasu")
         again()
     else:
-        print("Try again.")
+        print("Try again. Enter a valid number.")
         sentence_japanese()
 
 def sentence_french():
@@ -54,7 +54,7 @@ def sentence_french():
         print("J'étudie")
         again()
     else:
-        print("Try again.")
+        print("Try again. Enter a valid number.")
         sentence_french()
 
 def sentence_german():
@@ -75,7 +75,7 @@ def sentence_german():
         print("Ich studiere")
         again()
     else:
-        print("Try again")
+        print("Try again. Enter a valid number.")
         sentence_german()
 
 def again():
