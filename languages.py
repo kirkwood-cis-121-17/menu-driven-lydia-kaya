@@ -12,7 +12,7 @@ def main():
     elif choice == "3":
         sentence_german()
     else:
-        print("Please enter a number 1-3 and try again.")
+        print("Please enter a number from 1-3 and try again.")
         main()
     
 def sentence_japanese():
@@ -22,15 +22,18 @@ def sentence_japanese():
     choice = input("What sentence would you like to translate? ")
     if choice == "1":
         time.sleep(1)
-        print("Neko ga hoshii")
+        print("Watashi neko ga hoshii")
+        print("私猫が欲しい")
         again()
     elif choice == "2":
         time.sleep(1)
         print("Onaka ga suita")
+        print("お腹がすいた")
         again()
     elif choice == "3":
         time.sleep(1)
         print("Ima bennkyo o shimasu")
+        print("今勉強します")
         again()
     else:
         print("Try again. Enter a valid number.")
@@ -81,7 +84,7 @@ def sentence_german():
 def again():
     print("")
     choice = input("Would you like to translate another sentence? yes or no ")
-    if choice == "yes":
+    if choice.lower() == "yes".lower():
         main()
     else:
         print("Quitting program...")
