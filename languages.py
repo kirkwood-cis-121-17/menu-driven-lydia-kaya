@@ -57,27 +57,29 @@ def sentence_german():
         print("Try again. Enter a valid number.")
         sentence_german()
 
-choice = "continue"
-while choice == "continue":
-    print("1) Japanese")
-    print("2) French")
-    print("3) German")
-    choice = input("What language?: ")
-    if choice == "1":
-        sentence_japanese()
-        choice == input("Would you like to translate another sentence? yes or no ")
-        if choice.lower == "no".lower:
-            choice = "end"
+
+def main():
+    translate = ""
+    END = "quit"
+    while translate != END:
+        print("1) Japanese")
+        print("2) French")
+        print("3) German")
+        print("4) Quit")
+        choice = input("What language?: ")
+        if choice == "1":
+            sentence_japanese()
+            print("\n")
+        elif choice == "2":
+            sentence_french()
+            print("\n")
+        elif choice == "3":
+            sentence_german()
+            print("\n")
+        elif choice == "4":
             print("Quitting program...")
-    elif choice == "2":
-        sentence_french()
-        if choice.lower == "no".lower:
-            choice == "end"
-            print("Quitting program...")
-    elif choice == "3":
-        sentence_german()
-        if choice.lower == "no".lower:
-            choice == "end"
-            print("Quitting program...")
-    else:
-        print("Please enter a number from 1-3 and try again.")
+            translate = "quit"
+        else:
+            print("Please enter a number from 1-4 and try again.")
+            print("\n")
+main()
